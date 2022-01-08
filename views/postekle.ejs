@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./components/head') %>
+</head>
+<body>
+    <%-include('./components/header') %>
+
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1 class="text-center" style="color: #0085A1;">Post Ekle</h1>
+                    <div class="my-5">
+                        <form id="contactForm" method="post" action="/ekle">
+                            <div class="form-floating">
+                                <input class="form-control" id="post_name" type="text" placeholder="Enter post name..." data-sb-validations="required" name="post_name" />
+                                <label for="name">Yazı Başlığı</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Başlık Boş Bırakılmamalı</div>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="Enter post detail..." style="height: 12rem" data-sb-validations="required" name="post_detail" ></textarea>
+                                <label for="message">Yazı Açıklaması</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Yazı Boş Bırakılmamalı...</div>
+                            </div>
+                            <br />
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form Gönderimi Başarılı</div>
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Mesaj Göderilirken Hata Oluştu!</div></div>
+                            <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">GÖNDER</button>
+                        </form>
+                        &nbsp;
+                            <div class="container px-4 px-lg-5">
+                                <div class="row gx-4 gx-lg-5 justify-content-center">
+                                    <div class="col-md-10 col-lg-8 col-xl-7">
+                                        <ul class="list-inline text-center">
+                                            <li class="list-inline-item">
+                                                <a href="https://twitter.com/?lang=tr">
+                                                    <span class="fa-stack fa-lg">
+                                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="https://www.facebook.com/">
+                                                    <span class="fa-stack fa-lg">
+                                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="https://github.com/">
+                                                    <span class="fa-stack fa-lg">
+                                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="small text-center text-muted fst-italic">Telif Hakkı &copy; Web Sitesi 2022</div>
+                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%-include('./components/scripts') %>
+</body>
+</html>
