@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: true }))
 
 const { homeRoute, postRoute } = require('./routes');
 
-app.listen(process.env.APP_PORT, () => {
-    console.log(`Sunucu aktif! http://localhost:${process.env.APP_PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Sunucu aktif!`);
 
     app.use('/', homeRoute);
     app.use('/posts', postRoute);
